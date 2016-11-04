@@ -1,0 +1,5 @@
+body { font-family: Tahoma,Verdana,Segoe,sans-serif; font-size: 12px; font-size: 0.75rem; line-height: 18px; line-height: 1.125rem; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.site-branding__name-link {  font-size: 16px; font-size: 1rem; line-height: 24px; line-height: 1.5rem; }
+.site-branding__slogan {  font-size: 14px; font-size: 0.875rem; line-height: 21px; line-height: 1.313rem; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.node__title, .page__title, .user__title { font-family: Galada, sans-serif; }
+.node--view-mode-full .node__title, .node--view-mode-full .node__title a {  font-size: 14px; font-size: 0.875rem; line-height: 21px; line-height: 1.313rem; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }

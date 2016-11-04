@@ -1,0 +1,59 @@
+/**
+ * Custom CSS
+ * Use this file to override styles if you feel uncomfortable editing
+ * component stylesheets.
+ ============================================================================ */
+.pr-header {
+    background-color: #0B2148;
+	color: #D39870;
+}
+
+.image-style-file-entity-browser-small { float: left; padding-right: 10px;}
+
+.paragraph--type--zwischenueberschrift { font-weight: bold; }
+
+.attachment { padding-bottom: 20px;}
+
+.views-table p {
+    margin: 0rem;
+}
+
+h2, .h2 {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+.node--view-mode-full .node__title, .node--view-mode-full .node__title a {
+    font-size: 1.2rem;
+    line-height: 1.313rem;
+}
+
+//ul.menu a { font-size: 1.2rem;}
+
+/* Schriftgröße Hauptmenü */
+.rm-block__content .menu .menu__link { font-size: 1.0rem; }
+
+/* Schriftgröße Metropolen-Menü */
+.block-menu__content .menu .menu__link { font-size: 1.0rem; }
+
+/* Hauptmenü 1. Menüpunkt ohne Padding nach links */
+.ms-dropmenu .rm-block__content a:first-child {
+    padding: 0.4375rem 1.125rem 0.4375rem 0rem;
+}
+
+/* Hover für horizonales Menü (Hauptnavigation) */
+.rm-block__content .menu a:hover, .rm-block__content .menu a:active, .rm-block__content .menu a:focus {
+     color:#0B2148;
+	 background: #EF9766;
+}
+.rm-block__content .menu a.is-active {color:#0B2148;}
+
+/* Hover für vertikales Menü (Metropolen) */
+.block-menu__content .menu a:hover, .block-menu__content  .menu a:active, .block-menu__content  .menu a:focus {
+     color:#0B2148;
+}
+.block-menu__content .menu a.is-active {color:#0B2148;}
+
+
+/* Menüblock Letzte Beiträge => UL nicht einrücken */
+.item-list ul { padding-left: 0rem;}

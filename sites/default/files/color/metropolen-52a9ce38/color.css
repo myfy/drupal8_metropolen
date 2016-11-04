@@ -1,0 +1,1081 @@
+/**
+ * Colors
+ * - Add or modify colors for all theme elements.
+ * - Most colors are set in _variables.scss where you can make global changes
+ *   without touching this file at all.
+ * - If your theme is using the Color module be very careful about what you
+ *   change in this file, or in the global _variables.scss file, the color
+ *   schemes expect certain hex values to exist in the color.css file - it is
+ *   safer to place colors in a partial that is not parsed by the Color module.
+ ============================================================================ */
+/**
+ * base.elements
+ ============================================================================ */
+html {
+  background-color: #eb7433;
+}
+
+body {
+  background-color: transparent;
+  color: #050505;
+}
+
+a {
+  color: #ff792f;
+}
+a:visited {
+  color: #ff792f;
+}
+a:active, a.active {
+  color: #ff792f;
+}
+a:hover, a:focus {
+  color: #ff792f;
+}
+
+blockquote {
+  border-color: #fadccb;
+}
+blockquote p:first-child:before {
+  color: #babab9;
+}
+blockquote small {
+  color: #242221;
+}
+blockquote.pull-right {
+  border-right-color: #fadccb;
+}
+
+hr {
+  border-color: #fadccb;
+}
+
+/**
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background-color: #d2d7ff;
+}
+
+::selection {
+  background-color: #d2d7ff;
+}
+
+del {
+  color: #242221;
+}
+
+code,
+pre,
+var,
+kbd,
+samp {
+  background: #fdf6f2;
+}
+
+/**
+ * Web fonts
+ ============================================================================ */
+/* Override Font Awesome classes. */
+.fa-border {
+  border-color: #fadccb;
+}
+
+/*  Extra classes for Font Awesome. */
+.fa-text-color {
+  color: #050505;
+}
+
+.fa-text-color-light {
+  color: #545352;
+}
+
+.fa-text-color-medium {
+  color: #242221;
+}
+
+.fa-match-border {
+  color: #babab9;
+}
+
+.fa-match-border-light {
+  color: #e8e8e7;
+}
+
+.fa-match-link {
+  color: #ff792f;
+}
+
+.fa-trans-white-25 {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.fa-trans-white-50 {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.fa-trans-white-75 {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.fa-trans-black-25 {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.fa-trans-black-50 {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.fa-trans-black-75 {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+/**
+ * Page
+ *  - mainly for markup that is printed directly in page.html.twig and
+ *    .l-r {}
+ ============================================================================ */
+.page {
+  background-color: #fef9f7;
+}
+
+.regions {
+  background-color: #fef9f7;
+}
+
+.pr-header {
+  color: #050505;
+  background-color: #ffffff;
+}
+.pr-header .regions {
+  background: inherit;
+}
+
+.pr-navbar {
+  color: #ffffff;
+  background-color: #ef9766;
+}
+.pr-navbar .regions {
+  background: inherit;
+}
+.pr-navbar .menu a {
+  color: inherit;
+}
+
+.pr-features {
+  color: #050505;
+  background-color: #fae1d3;
+}
+.pr-features .regions {
+  background: inherit;
+}
+
+.pr-subfeatures {
+  color: #050505;
+  background-color: #fae1d3;
+}
+.pr-subfeatures .regions {
+  background: inherit;
+}
+
+.pr-footer {
+  color: #ffffff;
+  background-color: #ef9766;
+}
+.pr-footer .regions {
+  background: inherit;
+}
+.pr-footer .menu a {
+  color: inherit;
+}
+.pr-footer .menu a.active, .pr-footer .menu a:hover, .pr-footer .menu a:focus {
+  color: inherit;
+}
+
+/**
+ * AT attribution message
+ *  - a toggle setting in the theme settings, you can turn it on/off using
+ *    the Markup overrides extension.
+ ============================================================================ */
+.attribution .l-rw {
+  background-color: transparent;
+}
+.attribution .attribution__link {
+  color: #050505;
+}
+
+/**
+ * Feed Icons
+ *  - icons are SVG, SEE feed-icon.html.twig in AT Core templates directory.
+ ============================================================================ */
+.feed-icon-rss__path {
+  fill: rgba(0, 0, 0, 0.6);
+}
+
+/**
+ * Branding styles
+ *  - Drupal core branding block.
+ ============================================================================ */
+/**
+ * Blocks
+ ============================================================================ */
+/**
+ * Menus
+ *  - style Drupal core block menus.
+ *  - for the drop menu and other responsive menus see the mixins and the
+ *    _navbar.scss partial.
+ ============================================================================ */
+.menu a {
+  color: #ff792f;
+  border-color: #fadccb;
+}
+.menu a:hover, .menu a:focus {
+  color: #ff792f;
+}
+.menu a.active {
+  color: #ff792f;
+}
+
+.menu__item:first-child a {
+  border-color: #e4caca;
+}
+
+/**
+ * Responsive menu styles.
+ *
+ * Mixins provide the basic structure and a base style (not much), the rest
+ * is up to you, add colors, borders, padding and so on. Icons such as
+ * the hamburger and arrows are set in variables in _variables.scss, and you
+ * use the color variables for menus from there also.
+ *
+ * Menu styles are set in Appearance settings using the Responsive Menus extension.
+ * There you select a block, breakpoint, a default style and a responsive style.
+ * You can safely remove mixins from this file if you not going to use them later
+ * on, and want to save a few bytes in stylesheet size.
+ *
+ * Each mixin takes one or more parameters. Use these to customize the basic structure
+ * of the menu, or call options, for example you can place the offcanvas menu on the
+ * left or right.
+ *
+ * Do not import into breakpoints unless you are not using the Responsive Menu
+ * settings in Appearance Extensions, in which case you will need to load the
+ * at_core/at.responsivemenus library and provide it's required drupalSettings.
+ *
+ * Breakpoints are handled in matchMedia using Enquire.
+ *
+ * Responsive styles are a combination of three things:
+ *  1. Sass/CSS defined here (with breakpoints etc).
+ *  2. jQuery: responsive-menus.js in AT Core libraries which adds/toggles classes.
+ *  3. Theme settings as set in your themes Advanced extention settings.
+ ============================================================================ */
+.rm-region,
+.rm-block,
+.rm-block * {
+  background-color: inherit;
+  color: inherit;
+}
+
+.rm-toggle__link, .rm-toggle__link:hover, .rm-toggle__link:focus, .rm-toggle__link:active {
+  color: #fafafa;
+  background-color: #f2aa81;
+}
+.rm-toggle__icon {
+  fill: white;
+}
+.rm-toggle span {
+  background-color: transparent;
+}
+
+.rm-block__content .menu__item--active-trail > a {
+  color: inherit;
+  background-color: rgba(255, 255, 255, 0.095);
+}
+.rm-block__content .menu a {
+  color: inherit;
+  background-color: inherit;
+}
+.rm-block__content .menu a:after, .rm-block__content .menu a:before {
+  color: inherit !important;
+}
+.rm-block__content .menu a:active {
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+  opacity: 0.9;
+}
+.rm-block__content .menu a:hover, .rm-block__content .menu a:focus {
+  color: inherit;
+  background-color: rgba(255, 255, 255, 0.095);
+}
+.rm-block__content .menu a.active {
+  color: inherit;
+  background-color: rgba(255, 255, 255, 0.095);
+}
+.rm-block__content .menu a.active[href="/"] {
+  background-color: transparent;
+}
+.rm-block__content .menu a.active[href="/"]:hover, .rm-block__content .menu a.active[href="/"]:focus {
+  color: inherit;
+  background-color: rgba(255, 255, 255, 0.095);
+}
+
+.ms-vertical .rm-block__content .menu a,
+.ms-vertical .rm-block__content .menu a.active[href="/"],
+.ms-slidedown .rm-block__content .menu a,
+.ms-slidedown .rm-block__content .menu a.active[href="/"] {
+  color: inherit;
+  background-color: rgba(255, 255, 255, 0.095);
+}
+.ms-vertical .pr-header__header-second .rm-block__content .menu a,
+.ms-vertical .pr-header__header-second .rm-block__content .menu a.active[href="/"],
+.ms-slidedown .pr-header__header-second .rm-block__content .menu a,
+.ms-slidedown .pr-header__header-second .rm-block__content .menu a.active[href="/"] {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.ms-offcanvas .rm-block__content {
+  opacity: .001;
+  background-color: #eb7433;
+  color: #f4f4f4;
+}
+.ms-offcanvas .rm-block__content .menu a {
+  background-color: rgba(255, 255, 255, 0.095);
+}
+
+.ms-tiles .rm-block__content .menu-level-1 > .menu__item {
+  background-color: rgba(255, 255, 255, 0.095);
+}
+
+.ms-meganav.rm-is-open .rm-block__content .menu-level-1 > .menu__item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+.ms-meganav.rm-is-open .rm-block__content .menu-level-1 > .menu__item > span > a {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.ms-accordion .rm-accordion-trigger {
+  background-color: rgba(255, 255, 255, 0.095);
+}
+.ms-accordion .rm-accordion-trigger:hover, .ms-accordion .rm-accordion-trigger:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.ms-accordion .rm-accordion-trigger__icon {
+  background-color: transparent !important;
+  fill: white;
+}
+.rm-block__content .ms-accordion a:hover, .rm-block__content .ms-accordion a:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/**
+ * Breadcrumbs
+ ============================================================================ */
+.breadcrumb li:before {
+  color: #babab9;
+}
+.breadcrumb a {
+  color: #ff792f;
+  text-decoration: none;
+}
+
+/**
+ * Pagers
+ * - Full system pager.
+ * - Views mini pager.
+ ============================================================================ */
+.pager__link {
+  border-color: #fadccb;
+}
+.pager__link:focus, .pager__link:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.pager__link:active {
+  box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.75);
+  opacity: 0.9;
+}
+
+.pager__link--is-active {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.pager--mini .pager__link--is-active {
+  background-color: transparent;
+  opacity: 0.65;
+}
+
+/**
+ * Table Theme
+ * Style Drupal selectors for tables.
+ ============================================================================ */
+tr:hover {
+  background-color: #fdf2ed;
+}
+
+thead tr {
+  color: #050505;
+  background-color: #fcefe8;
+}
+
+tr,
+td,
+th {
+  border-color: #fadccb;
+}
+
+/**
+ * Forms
+ *  - This probably seems like a lot - remember AT unsets system.theme.css and
+ *    gives you complete control over all form elements.
+ *
+ * Note:
+ *  - input type submit is treated as a 'button', see _buttons.scss
+ *  - for drop buttons see _buttons.scss
+ ============================================================================ */
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  color: #050505;
+  border-color: #fadccb;
+  background-color: #ffffff;
+}
+textarea:focus,
+select:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus {
+  border-color: #fadccb;
+  color: #050505;
+}
+textarea:hover, textarea:focus,
+select:hover,
+select:focus,
+input[type="date"]:hover,
+input[type="date"]:focus,
+input[type="datetime"]:hover,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:hover,
+input[type="datetime-local"]:focus,
+input[type="email"]:hover,
+input[type="email"]:focus,
+input[type="month"]:hover,
+input[type="month"]:focus,
+input[type="number"]:hover,
+input[type="number"]:focus,
+input[type="password"]:hover,
+input[type="password"]:focus,
+input[type="search"]:hover,
+input[type="search"]:focus,
+input[type="tel"]:hover,
+input[type="tel"]:focus,
+input[type="text"]:hover,
+input[type="text"]:focus,
+input[type="time"]:hover,
+input[type="time"]:focus,
+input[type="url"]:hover,
+input[type="url"]:focus,
+input[type="week"]:hover,
+input[type="week"]:focus {
+  background-color: #ffffff;
+}
+textarea[disabled]:hover, textarea[disabled]:focus,
+select[disabled]:hover,
+select[disabled]:focus,
+input[type="date"][disabled]:hover,
+input[type="date"][disabled]:focus,
+input[type="datetime"][disabled]:hover,
+input[type="datetime"][disabled]:focus,
+input[type="datetime-local"][disabled]:hover,
+input[type="datetime-local"][disabled]:focus,
+input[type="email"][disabled]:hover,
+input[type="email"][disabled]:focus,
+input[type="month"][disabled]:hover,
+input[type="month"][disabled]:focus,
+input[type="number"][disabled]:hover,
+input[type="number"][disabled]:focus,
+input[type="password"][disabled]:hover,
+input[type="password"][disabled]:focus,
+input[type="search"][disabled]:hover,
+input[type="search"][disabled]:focus,
+input[type="tel"][disabled]:hover,
+input[type="tel"][disabled]:focus,
+input[type="text"][disabled]:hover,
+input[type="text"][disabled]:focus,
+input[type="time"][disabled]:hover,
+input[type="time"][disabled]:focus,
+input[type="url"][disabled]:hover,
+input[type="url"][disabled]:focus,
+input[type="week"][disabled]:hover,
+input[type="week"][disabled]:focus {
+  color: #050505;
+}
+
+/**
+ * Collapsible details.
+ *
+ * @see collapse.js
+ * @thanks http://nicolasgallagher.com/css-background-image-hacks/
+ */
+details {
+  border-color: #fadccb;
+  background-color: #fef9f7;
+}
+
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  background-color: #fdf2ed;
+  color: #050505;
+}
+
+button[disabled],
+input[disabled],
+select[disabled],
+select[disabled] option,
+select[disabled] optgroup,
+textarea[disabled],
+a.button_disabled {
+  background-color: #f5ecec;
+  color: #050505;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #050505;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #050505;
+}
+
+input.placeholder_text,
+textarea.placeholder_text {
+  color: #050505;
+}
+
+/**
+ * Form Theme
+ ============================================================================ */
+.form-type-radio label.option,
+.form-type-checkbox label.option {
+  border-color: #fadccb;
+  background-color: #ffffff;
+}
+.form-type-radio label.option:focus, .form-type-radio label.option:hover,
+.form-type-checkbox label.option:focus,
+.form-type-checkbox label.option:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.ui-dialog .form-text {
+  background-color: inherit !important;
+  color: black !important;
+  border-color: silver !important;
+}
+.ui-dialog .form-text::-webkit-input-placeholder {
+  color: silver;
+}
+.ui-dialog .form-text::-moz-placeholder {
+  color: silver;
+}
+.ui-dialog .form-text:-ms-input-placeholder {
+  color: silver;
+}
+.ui-dialog .form-text::placeholder {
+  color: silver;
+}
+.ui-dialog .form-type-radio label.option,
+.ui-dialog .form-type-checkbox label.option {
+  border-color: transparent;
+  background-color: inherit;
+}
+.ui-dialog .form-type-radio label.option:focus, .ui-dialog .form-type-radio label.option:hover,
+.ui-dialog .form-type-checkbox label.option:focus,
+.ui-dialog .form-type-checkbox label.option:hover {
+  color: inherit;
+  background-color: inherit;
+}
+
+.filter-wrapper {
+  border-color: #fadccb;
+}
+
+.tips {
+  color: #050505;
+}
+
+.description {
+  color: #050505;
+}
+
+form .marker {
+  color: #c54100;
+}
+
+.form-required:after {
+  color: #c54100;
+}
+
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error {
+  border-color: #ffeedc;
+}
+
+/**
+ * Vertical tabs.
+ ============================================================================ */
+.vertical-tabs {
+  background-color: #fdf6f2;
+  border-color: #fadccb;
+}
+
+.vertical-tabs__menu {
+  background-color: #ffffff;
+  border-top-color: #fadccb;
+}
+
+.vertical-tabs__menu-item {
+  background: #ffffff;
+  border-color: #fadccb;
+}
+.vertical-tabs__menu-item.is-selected {
+  background-color: #fdf6f2;
+}
+.vertical-tabs__menu-item.is-selected .vertical-tabs__menu-item-title {
+  color: #050505;
+}
+
+.vertical-tabs__pane {
+  background-color: #fdf6f2;
+}
+
+/**
+ * Buttons
+ * We include button styling separate (from _forms.scss) mainly because the form
+ * styles are quite long already and we often want to add unique button variants.
+ *
+ *  - applies to elements with class "button", includes styles for:
+ *  - input buttons
+ *  - anchor links styled as buttons
+ *  - drop buttons
+ *  - action link buttons
+ ============================================================================ */
+button,
+.button {
+  color: #fafafa;
+  background-color: #f2aa81;
+  border-color: #f2aa81;
+  opacity: 0.9;
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+}
+button:hover, button:focus,
+.button:hover,
+.button:focus {
+  opacity: 1;
+  color: #fafafa;
+  background-color: #f2aa81;
+}
+button:visited,
+.button:visited {
+  color: #fafafa;
+  background-color: #f2aa81;
+}
+button[disabled]:hover,
+.button[disabled]:hover {
+  opacity: 1;
+}
+
+.button--primary {
+  color: #fafafa;
+  background-color: #ff792f;
+  opacity: 0.9;
+  border: 1px #ff792f solid;
+}
+.button--primary:link, .button--primary:visited {
+  color: #fafafa;
+  background-color: #ff792f;
+  border-color: #ff792f;
+}
+.button--primary:hover, .button--primary:focus, .button--primary:active, .button--primary.active {
+  color: #fafafa;
+  background-color: #ff792f;
+  border-color: #ff792f;
+  opacity: 1;
+}
+
+.button--danger {
+  color: #623100;
+  background-color: transparent;
+  opacity: 0.9;
+}
+.button--danger:link, .button--danger:visited {
+  color: #623100;
+  background-color: transparent;
+  border-color: transparent;
+}
+.button--danger:hover, .button--danger:focus, .button--danger:active, .button--danger.active {
+  color: #623100;
+  background-color: transparent;
+  border-color: transparent;
+  opacity: 1;
+}
+
+.button-action {
+  opacity: 1;
+}
+
+#edit-preview {
+  background-color: #ffffff;
+  color: #575555;
+}
+
+button.link-edit-summary {
+  background-color: inherit;
+  color: #050505;
+}
+button.link-edit-summary:hover, button.link-edit-summary:focus {
+  background-color: inherit;
+  color: #050505;
+}
+
+/* Drop buttons */
+.dropbutton-widget {
+  background-color: #fef9f7;
+  border-color: #f2aa81;
+}
+.dropbutton-widget:hover, .dropbutton-widget:focus {
+  border-color: #f2aa81;
+}
+
+.dropbutton .dropbutton-action .button {
+  color: #fafafa;
+  background-color: #ff792f;
+  opacity: 0.9;
+}
+.dropbutton .dropbutton-action .button:link, .dropbutton .dropbutton-action .button:visited {
+  color: #fafafa;
+  background-color: #ff792f;
+  border-color: #fadccb;
+}
+.dropbutton .dropbutton-action .button:hover, .dropbutton .dropbutton-action .button:focus, .dropbutton .dropbutton-action .button:active, .dropbutton .dropbutton-action .button.active {
+  color: #fafafa;
+  background-color: #ff792f;
+  border-color: #fadccb;
+  opacity: 1;
+}
+.dropbutton .secondary-action {
+  border-top-color: #f2aa81;
+}
+.dropbutton .secondary-action .button {
+  background-color: #fef9f7;
+  color: #575555;
+}
+.dropbutton .dropbutton-toggle button:hover {
+  background-color: transparent;
+}
+
+.dropbutton-multiple .dropbutton {
+  border-right-color: #f2aa81;
+}
+[dir="rtl"] .dropbutton-multiple .dropbutton {
+  border-left-color: #f2aa81;
+}
+.dropbutton-multiple.open .dropbutton-action .button {
+  border-radius: 2px 0 0 0;
+}
+
+.dropbutton-arrow {
+  color: #575555;
+}
+
+/**
+ * File icons
+ * AT un-sets Drupal core file field CSS for image icons and replaces them
+ * with FontAwesome icons.
+ ============================================================================ */
+.file a:before {
+  color: #653232;
+}
+
+/**
+ * Image upload widget.
+ ============================================================================ */
+.image-preview {
+  background-color: transparent;
+}
+
+/**
+ * Field Taxonomy Reference
+ ============================================================================ */
+/**
+ * Labels.
+ *  -  for example "new" mark on comments, tags etc.
+ ============================================================================ */
+.filter-help a:after,
+.more-help-link a:after {
+  color: #e4caca;
+}
+
+/**
+ * Messages
+ *  - System messages such as status, warning and error are NOT included
+ *    here as we don't want them to shift or change in color module, since
+ *    they are too important with regards to accessibility etc.
+ ============================================================================ */
+.dev-query {
+  color: #f4f4f4;
+}
+
+body > pre,
+.xdebug-var-dump {
+  color: #f4f4f4;
+}
+
+.page .xdebug-var-dump {
+  color: #050505;
+}
+
+body:before {
+  color: #623100;
+}
+
+/**
+ * Content Types (nodes)
+ *  - in Drupal a content type is a bunch of fields we use to enter and display
+ *    content, such as pages, blog posts, forum posts and so on. Each of those
+ *    is usually a content type you create in the Drupal admin.
+ *  - an instance of a content type (e.g. a single blog post) is called a node,
+ *    the root template is called node.html.twg and the base selector is .node {}
+ ============================================================================ */
+.node {
+  background-color: #ffffff;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.node--sticky {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/**
+ * Aggregator
+ ============================================================================ */
+.aggregator-item {
+  background-color: #ffffff;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+/**
+ * Forums
+ *  - see table.scss for generic table styles.
+ ============================================================================ */
+.forum .icon svg {
+  fill: rgba(0, 0, 0, 0.5);
+}
+
+/**
+ * Search results pages
+ ============================================================================ */
+.item-list--search-results {
+  background-color: #ffffff;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.search-result__snippet-info {
+  color: #242221;
+}
+
+/**
+ * Comments
+ *  - comment field (holds comment title, form, comments etc)
+ *  - styles for comments
+ ============================================================================ */
+.comment {
+  border-color: #fdf3ee;
+}
+
+/**
+ * Social media
+ *  - styles for socila media links, modules etc.
+ ============================================================================ */
+.block-social-media-links .platform__link,
+.pane-social-media-link-widget .platform__link {
+  color: #050505;
+  opacity: 0.65;
+}
+.block-social-media-links .platform__link:hover, .block-social-media-links .platform__link:focus,
+.pane-social-media-link-widget .platform__link:hover,
+.pane-social-media-link-widget .platform__link:focus {
+  opacity: 1;
+}
+
+/**
+ * Views
+ ============================================================================ */
+.view-empty:not(:empty) .links a[href="/node/add"] {
+  opacity: 0.9;
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  color: #fafafa;
+  background-color: #ff792f;
+  opacity: 0.9;
+  border: 1px #ff792f solid;
+}
+.view-empty:not(:empty) .links a[href="/node/add"]:hover, .view-empty:not(:empty) .links a[href="/node/add"]:focus {
+  opacity: 1;
+}
+.view-empty:not(:empty) .links a[href="/node/add"][disabled]:hover {
+  opacity: 1;
+}
+.view-empty:not(:empty) .links a[href="/node/add"]:link, .view-empty:not(:empty) .links a[href="/node/add"]:visited {
+  color: #fafafa;
+  background-color: #ff792f;
+  border-color: #ff792f;
+}
+.view-empty:not(:empty) .links a[href="/node/add"]:hover, .view-empty:not(:empty) .links a[href="/node/add"]:focus, .view-empty:not(:empty) .links a[href="/node/add"]:active, .view-empty:not(:empty) .links a[href="/node/add"].active {
+  color: #fafafa;
+  background-color: #ff792f;
+  border-color: #ff792f;
+  opacity: 1;
+}
+
+/**
+ * CKEditor Colors
+ * Pretty brutal, but effective, combines with other editor partials and files,
+ * mainly for Mimic but will color borders for moono also.
+ ============================================================================ */
+.cke_chrome {
+  border-color: #fadccb !important;
+  border-top-color: #fadccb !important;
+  border-bottom-color: #fadccb !important;
+  color: #050505 !important;
+}
+
+.cke_top {
+  border-bottom-color: #fadccb !important;
+  background-color: #fef9f7 !important;
+  color: #050505 !important;
+}
+
+.cke_bottom {
+  border-top-color: #fadccb !important;
+  background-color: #fef9f7 !important;
+  color: #050505 !important;
+}
+
+.cke_reset,
+.cke_editable,
+.cke_editable *,
+textarea.cke_source,
+.cke_combopanel {
+  background-color: #ffffff !important;
+  color: #050505 !important;
+}
+
+.cke_combo_off a.cke_combo_button,
+a.cke_button_off {
+  color: #653232 !important;
+}
+.cke_combo_off a.cke_combo_button:hover, .cke_combo_off a.cke_combo_button:focus, .cke_combo_off a.cke_combo_button:active,
+a.cke_button_off:hover,
+a.cke_button_off:focus,
+a.cke_button_off:active {
+  background-color: #f8f1f1 !important;
+  color: #050505 !important;
+}
+
+.cke_combo_on a.cke_combo_button,
+a.cke_button_on {
+  background-color: #f8f1f1 !important;
+  color: #050505 !important;
+}
+.cke_combo_on a.cke_combo_button:hover, .cke_combo_on a.cke_combo_button:focus, .cke_combo_on a.cke_combo_button:active,
+a.cke_button_on:hover,
+a.cke_button_on:focus,
+a.cke_button_on:active {
+  background-color: #f8f1f1 !important;
+  color: #050505 !important;
+}
+
+.cke_panel,
+.cke_combopanel {
+  background-color: #ffffff !important;
+  border-color: #fadccb !important;
+}
+
+.cke_combo_text {
+  color: #050505 !important;
+}
+
+.cke_combo_arrow {
+  border-top-color: #fadccb !important;
+}
+
+.cke_panel_listItem a {
+  color: inherit !important;
+}
+
+* html .cke_panel_listItem a {
+  color: #653232 !important;
+}
+*:first-child + html .cke_panel_listItem a {
+  color: #653232 !important;
+}
+
+.cke_panel_listItem.cke_selected a {
+  background-color: #f8f1f1 !important;
+}
+.cke_panel_listItem a:hover, .cke_panel_listItem a:focus, .cke_panel_listItem a:active {
+  background-color: #f8f1f1 !important;
+  color: #050505 !important;
+}
+
+.cke_reset_all,
+.cke_button_icon:before {
+  color: #050505 !important;
+}
+
+.cke_resizer {
+  border-color: transparent #fadccb transparent transparent !important;
+}
+
+a.cke_menu_button:after, a.cke_menu_button:before,
+a.cke_combo_button:after,
+a.cke_combo_button:before,
+a.cke_button:after,
+a.cke_button:before {
+  display: none !important;
+}
+
+input.cke_dialog_ui_input_text,
+input.cke_dialog_ui_input_password {
+  background-color: white !important;
+  color: black !important;
+}
+
+.ckeditor-dialog-loading,
+.ckeditor-dialog-loading * {
+  background-color: #fdf6f2 !important;
+  color: #050505 !important;
+  border-color: #fdf3ee !important;
+}
