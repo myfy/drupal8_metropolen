@@ -9,7 +9,7 @@
 </ul>
 
 <h2>Dokumentation:</h2>
-<h3>Installlierte Module:</h3>
+<h3>Installierte Module:</h3>
 <ul>
 <li>403 to 404</li>
 <li>Backup and Migrate</li>
