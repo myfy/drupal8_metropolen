@@ -3,7 +3,7 @@
 
 <h2>Anleitung:</h2>
 <ul>
-<li>Datenbank-Dump liegt im Verzeichnis: /sites/defautl/backups</li>
+<li>Datenbank-Dump liegt im Verzeichnis: /sites/default/backups</li>
 <li>settings.php mit Datenbank-Konfiguration unter /sites/default erstellen</li>
 </ul>
 
