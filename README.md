@@ -35,7 +35,7 @@
 <li>Entity Browser IEF</li>
 <li>Imce File Manager</li>
 <li>Media entity</li>
-<li>Taonomy Menu</li>
+<li>Taxonomy Menu</li>
 <li>Paragraphs</li>
 <li>AT Theme Generator (Adaptivetheme)</li>
 <li>AT Tools (Adaptivetheme)</li>
