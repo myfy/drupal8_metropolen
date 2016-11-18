@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Drupal8 Metropolen : Beispielseite einer Drupal8 Installation zu Schulungszwecken">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Drupal8 Metropolen</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/myfy/drupal8_metropolen">View on GitHub</a>
+
+          <h1 id="project_title">Drupal8 Metropolen</h1>
+          <h2 id="project_tagline">Beispielseite einer Drupal8 Installation zu Schulungszwecken</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/myfy/drupal8_metropolen/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/myfy/drupal8_metropolen/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="projekt-website-zu-drupal8---metropolen" class="anchor" href="#projekt-website-zu-drupal8---metropolen" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Projekt-Website zu Drupal8 - Metropolen</h1>
+
+<h2>
+<a id="anleitung-zum-nachbauen" class="anchor" href="#anleitung-zum-nachbauen" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Anleitung zum Nachbauen</h2>
+
+<ul>
+<li>Seite anlegen =&gt; Impressum</li>
+<li>Modul easy-breadcrumb für current page titel installieren</li>
+<li>Taxonomy "Metropolen" anlgen 
+Alias: \kontinent\land</li>
+<li>Menü aus Taxonomy erzeugen
+a) Modul "Taxonomy Menü" installieren
+b) Menü "Metropolen" anlegen
+c) Taxonomy-Menü &gt; Neu mit Menü "Metropolen" verbinden
+d) Blocklayout: Menu: Sidebar first - Menüebenen 1-2</li>
+<li>Inhaltstyp Artikel anpassen -&gt; umbenennen in "Städte"
+a) Feld Taxonomy - Reference "Metropolen" ergänzen =&gt; unbegrenzte Anzahl an Tags
+b) Input/Output - Ansicht anpassen
+c) Bearbeiten &gt; Menüeinstellungen - Verfügbare Menüs: Metropolen Menü aktivieren
+d) Anzeigeeinstellungen &gt; Autor&amp;Date deaktivieren
+e) Feld image &gt; Dateiodner [bilder]</li>
+<li>Artikel =&gt; Städte erfassen und Menüpunkt erzeugen
+Achtung: Immer auch übergeordnete Kategorie (Kontinent) anklicken!</li>
+<li>Modul Linkit zum Verlinken von Artikeln (interne Links)
+a) Linkit Profil anlegen: all_users
+b) Linkit Plugin bei Textformat (/admin/config/formats) aktivieren  und Icon in CKeditor einfgüen
+=&gt; Artikel  Neapel mit Rom und Madrid verlinken</li>
+<li>Adaptive Themes (Theme Generator)
+benötigt AT-Tools Modul
+Design: neuer Karteireiter: AT Theme Generator
+Doku: <a href="http://docs.adaptivethmes.com">http://docs.adaptivethmes.com</a>
+Struktur &gt; Blocklayout &gt; Site branding &gt; Konfigurieren:
+SiteLogo, Name der Website, Slogan der Website
+Themes &gt; metropolen &gt; Einstellungen &gt; Basic Settings:
+Pfad zum eigenen Logo: Logo-weltkarte.jpg
+custom.css: .pr-header {background-color: #0B2148; color: #D39870;}
+Favicon.ico hochladen</li>
+<li>Blocklayout: user menu ausblenden
+Sidebar Second: Tools &amp; user Login ausblenden
+Sidebar First: Metropolen Menü einblenden</li>
+<li>Aufteilung Header 6:6 ändern in 10:2
+Theme &gt; metropolen &gt; Einstellung &gt; Layouts (unten)
+page (Default) &gt; wide all and min-width 60em
+tablet: 8:4</li>
+<li>Bilder position: Theme &gt; metropolen &gt; Einstellungen &gt; Image Settings &gt; Article &gt; Ausrichtung</li>
+<li>Farbschema: Tipping Point</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Drupal8 Metropolen maintained by <a href="https://github.com/myfy">myfy</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
