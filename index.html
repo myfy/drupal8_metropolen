@@ -53,39 +53,62 @@ b) Input/Output - Ansicht anpassen
 c) Bearbeiten &gt; Menüeinstellungen - Verfügbare Menüs: Metropolen Menü aktivieren
 d) Anzeigeeinstellungen &gt; Autor&amp;Date deaktivieren
 e) Feld image &gt; Dateiodner [bilder]</li>
-<li>Artikel =&gt; Städte erfassen und Menüpunkt erzeugen
+<li>Artikel =&gt; Städte erfassen und Menüpunkt erzeugen<br>
 Achtung: Immer auch übergeordnete Kategorie (Kontinent) anklicken!</li>
 <li>Modul Linkit zum Verlinken von Artikeln (interne Links)
 a) Linkit Profil anlegen: all_users
-b) Linkit Plugin bei Textformat (/admin/config/formats) aktivieren  und Icon in CKeditor einfgüen
+b) Linkit Plugin bei Textformat (/admin/config/formats) aktivieren  und Icon in CKeditor einfgüen<br>
 =&gt; Artikel  Neapel mit Rom und Madrid verlinken</li>
-<li>Adaptive Themes (Theme Generator)
-benötigt AT-Tools Modul
-Design: neuer Karteireiter: AT Theme Generator
-Doku: <a href="http://docs.adaptivethmes.com">http://docs.adaptivethmes.com</a>
-Struktur &gt; Blocklayout &gt; Site branding &gt; Konfigurieren:
-SiteLogo, Name der Website, Slogan der Website
-Themes &gt; metropolen &gt; Einstellungen &gt; Basic Settings:
-Pfad zum eigenen Logo: Logo-weltkarte.jpg
-custom.css: .pr-header {background-color: #0B2148; color: #D39870;}
+<li>Adaptive Themes (Theme Generator)<br>
+benötigt AT-Tools Modul<br>
+Design: neuer Karteireiter: AT Theme Generator<br>
+Doku: <a href="http://docs.adaptivethmes.com">http://docs.adaptivethmes.com</a><br>
+Struktur &gt; Blocklayout &gt; Site branding &gt; Konfigurieren: SiteLogo, Name der Website, Slogan der Website<br>
+Themes &gt; metropolen &gt; Einstellungen &gt; Basic Settings: Pfad zum eigenen Logo: Logo-weltkarte.jpg<br>
+custom.css: .pr-header {background-color: #0B2148; color: #D39870;}<br>
 Favicon.ico hochladen</li>
-<li>Blocklayout: user menu ausblenden
-Sidebar Second: Tools &amp; user Login ausblenden
-Sidebar First: Metropolen Menü einblenden</li>
-<li>Aufteilung Header 6:6 ändern in 10:2
-Theme &gt; metropolen &gt; Einstellung &gt; Layouts (unten)
-page (Default) &gt; wide all and min-width 60em
+<li>Blocklayout: user menu ausblenden<br>
+Sidebar Second: Tools &amp; user Login ausblenden<br>
+Sidebar First: Metropolen Menü einblenden<br>
+</li>
+<li>Aufteilung Header 6:6 ändern in 10:2<br>
+Theme &gt; metropolen &gt; Einstellung &gt; Layouts (unten)<br>
+page (Default) &gt; wide all and min-width 60em<br>
 tablet: 8:4</li>
 <li>Bilder position: Theme &gt; metropolen &gt; Einstellungen &gt; Image Settings &gt; Article &gt; Ausrichtung</li>
 <li>Farbschema: Tipping Point</li>
-<li>Datei-Browser: Modul: file browser =&gt; zur Integration in den Editor =&gt; Icon
-root &gt; libraries &gt; dropzone
-root &gt; libraries &gt; imageload
+<li>Datei-Browser: Modul: file browser =&gt; zur Integration in den Editor =&gt; Icon<br>
+root &gt; libraries &gt; dropzone<br>
+root &gt; libraries &gt; imageload<br>
 root &gt; libraries &gt; masonry</li>
 <li>Paragraphs =&gt; zur individuellen Gestaltung von Artikeln
 a) Paragraphtypes anlegen: bild, bild+text, text+bild, text, <strong>paragraph</strong> (wichtig!)
 b) Inhaltstyp "Paragraph" anlegen &gt; Feld: <strong>paragraph</strong>
 c) <strong>Wichtig</strong>: permissions view:xyz aktivieren</li>
+<li>Views &gt; Startseite &gt; Raster &gt; 2spaltig: Blöcke alle in sidtebar first</li>
+<li>Slideshow &gt; Inhaltstyp Slideshow, Position: leaderboard</li>
+<li>Bildgallery: Inhaltstyp Flaggen, View Page Raster</li>
+<li>Views &gt; Ansichten Kontinente<br>
+vorgefertigte Views
+
+<ol>
+<li>Archiv aktiveren + Block &gt; Sidebar second</li>
+<li>Neueste Beiträge &gt; Text ändenr in "letzte Beiträge" &gt; nur auf Startseite platzieren: </li>
+<li>Glossar Länderkennzeichen &gt; Dublikate &gt; Länderkennzeichen
+
+<ul>
+<li>Inhaltstyp Glossar anlegen - Feld Länderkennzeichen Text formattet 255 Alias: /glossar/land</li>
+<li>View ändern: /glossar<br>
+Felder: Inhalte Titel &gt; Link zum Inhalt deaktivieren
+Inhalt: Länderkennzeichen<br>
+Filterkriterien: Inhalt: Länderkennzeichen (nicht leer)<br>
+Erweitert: Beziehung Autor löschen<br>
+Custom CSS: .view-table p {margin: 0rem;} .attachement {pading-bottom: 20px;}</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>Breadcrumb auch auf Startseite: Block Breadcrumb  entfernen</li>
 </ul>
       </section>
     </div>
