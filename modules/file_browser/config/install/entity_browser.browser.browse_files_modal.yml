@@ -27,7 +27,7 @@ widget_selector_configuration: {  }
 widgets:
   a4ad947c-9669-497c-9988-24351955a02f:
     settings:
-      view: files_entity_browser
+      view: file_entity_browser
       view_display: entity_browser_1
     uuid: a4ad947c-9669-497c-9988-24351955a02f
     weight: 1

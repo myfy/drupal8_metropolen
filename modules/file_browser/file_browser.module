@@ -37,7 +37,7 @@ function file_browser_form_alter(&$form, FormStateInterface &$form_state) {
       $form['actions_wrap'] = [
         '#type' => 'container',
         '#attributes' => [
-          'class' => 'file-browser-actions',
+          'class' => ['file-browser-actions'],
         ],
       ];
 
